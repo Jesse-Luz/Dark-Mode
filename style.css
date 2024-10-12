@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --corPrimaria: rgb(190, 162, 232);
+    --corArtUm: rgb(36, 124, 224);
+    --corArtDois: #e32727;
+    --corArtTres: #2ede1a;
+    --corArtQuatro: #cb18e6;
+    --largura: 24%;
+    --altura: 350px;
+}
+
+body {
+    background-color: #ececfa;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    height: 10%;
+    width: 100%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    min-height: 90%;
+    background-color: rgb(31, 65, 127);
+    padding: 1%;
+}
+
+section {
+    background-color: var(--corPrimaria);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label {
+    position: absolute;
+    width: 52px;
+    height: 30px;
+    background-color: #04133d;
+    border-radius: 20px;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+label span {
+    width: 50%;
+    height: 100%;
+    display: block;
+    background-color: #c2d3e5;
+    border-radius: 100%;
+    transition: all ease .3s;
+}
+
+#change {
+    width: 50px;
+    height: 30px;
+    display: none;
+}
+
+.art {
+    width: 24%;
+    min-width: 300px;
+    min-height: var(--altura);
+    margin: 0.5%;
+    display: block;
+}
+
+.um {
+    background-color: var(--corArtUm);
+}
+
+.dois {
+    background-color: var(--corArtDois);
+}
+
+.tres {
+    background-color: var(--corArtTres);
+}
+
+.quatro {
+    background-color: var(--corArtQuatro);
+}
+
+.darkMode label span  {
+    transform: translateX(100%);
+}
+
+.darkMode {
+    transition: all ease .3s;
+    --corPrimaria: rgb(110, 37, 218);
+    --corArtUm: rgb(31, 59, 180);
+    --corArtDois: #a70c0c;
+    --corArtTres: #1a8b0d;
+    --corArtQuatro: #9a0eaf;
+    background-color: var(--corArtUm);
+}
+
+@media only screen and (max-width: 1079px) {
+    .art {
+        width: 49%;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    section {
+        padding: 1%;
+    }
+
+    .art {
+        width: 100%;
+        min-width: 200px;
+    }
+}
